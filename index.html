@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ecollect!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Ecollect!</h1>
+
+<div id="info">
+    <p>Mapa: <span id="map-name">---</span></p>
+    <p>Pontuação: <span id="score">0</span></p>
+    <p>Tempo: <span id="time">45</span>s</p>
+  </div>
+
+<div id="game-area">
+  <img id="player" src="sprites/player.png">
+</div>
+
+<div id="controls">
+  <button id="up">▲</button>
+  <div>
+    <button id="left">◀</button>
+    <button id="collect">🎒</button>
+    <button id="right">▶</button>
+  </div>
+  <button id="down">▼</button>
+</div>
+
+<div id="start-message">
+  <p>Escolha o mapa:</p>
+  <button data-map="forest">Floresta</button>
+  <button data-map="lake">Lago</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>

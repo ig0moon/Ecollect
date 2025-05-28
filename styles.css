@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: black;
+  height: 100vh;
+  overflow: hidden;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+h1 {
+	text-align: center;
+}
+
+#game-area {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  background: url('sprites/forest.png') no-repeat center/cover;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+#player {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.trash {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+#controls {
+  margin-top: 10px;
+  display: flex;
+  grid-template-columns: repeat(3, 60px);
+  grid-gap: 5px;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  border: none;
+  background: #555;
+  color: white;
+  border-radius: 10px;
+}
+
+#hud {
+  margin: 10px 0;
+}
+
+.point-popup {
+  position: absolute;
+  color: yellow;
+  font-weight: bold;
+  animation: rise 1s ease-out forwards;
+}
+
+@keyframes rise {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
