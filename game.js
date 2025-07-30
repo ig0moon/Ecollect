@@ -172,6 +172,51 @@ btnDown.addEventListener('click', () => movePlayer(0, 10));
 btnLeft.addEventListener('click', () => movePlayer(-10, 0));
 btnRight.addEventListener('click', () => movePlayer(10, 0));
 
+document.addEventListener("keydown", function(event) {
+  const step = 10;
+
+  switch (event.key) {
+    case "ArrowUp":
+      movePlayer(0, -step); //sobe
+      break;
+
+    case "ArrowDown":
+      movePlayer(0, step); //desce
+      break;
+
+    case "ArrowLeft":
+      movePlayer(-step, 0); //esquerda
+      break;
+
+    case "ArrowRight":
+      movePlayer(step, 0); //direita
+      break;
+
+    case "e":
+      for (let i = 0; i < trashItems.length; i++) {
+      const trash = trashItems[i];
+      const trashX = parseInt(trash.style.left);
+      const trashY = parseInt(trash.style.top);
+
+      if (Math.abs(trashX - playerX) < 20 && Math.abs(trashY - playerY) < 20) {
+        const points = parseInt(trash.dataset.points);
+        score += points;
+        //time += 3;
+
+        trash.remove();
+        trashItems.splice(i, 1);
+        showPointPopup(points);
+        spawnTrash();
+        updateDisplay();
+
+        collectSound.play();
+        scoreSound.play();
+      break;
+    }
+  }}
+});
+
+
 btnCollect.addEventListener('click', () => {
   for (let i = 0; i < trashItems.length; i++) {
     const trash = trashItems[i];
