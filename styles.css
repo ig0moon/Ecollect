@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+header {
+  width: 100%;
+  height: 10%;
+  background: greenyellow;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 1%;
+  border-bottom: 1px solid grey;
+}
+
+#info {
+  display: flex;
+  margin: 0;
+  gap: 12vw;
+}
+
 body {
   background: white;
   display: flex;
@@ -12,7 +29,6 @@ body {
   align-items: center;
   font-family: sans-serif;
   color: black;
-  height: 100vh;
   overflow: hidden;
   touch-action: manipulation;
   user-select: none;
@@ -24,11 +40,12 @@ h1 {
 
 #game-area {
   position: relative;
-  width: 480px;
+  width: 90%;
   height: 480px;
   background: url('sprites/forest.png') no-repeat center/cover;
   border: 2px solid black;
   overflow: hidden;
+  margin-top: 5px;
 }
 
 #player {
@@ -60,6 +77,24 @@ button {
   border-radius: 10px;
 }
 
+#start-message {
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+#nomemapa {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
 #hud {
   margin: 10px 0;
 }
@@ -74,4 +109,30 @@ button {
 @keyframes rise {
   0% { opacity: 1; transform: translateY(0); }
   100% { opacity: 0; transform: translateY(-20px); }
+}
+
+@media (min-width: 600px) {
+  #game-area {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background: url('sprites/forest.png') no-repeat center/cover;
+    border: 2px solid black;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+
+  #info {
+    display: flex;
+    margin: 0;
+    gap: 7vw;
+  }
+  
+  #start-message {
+    margin-bottom: 1%;
+  }
+
+  #controls {
+    display: none;
+  }
 }

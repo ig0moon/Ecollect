@@ -8,7 +8,15 @@
 </head>
 <body>
 
-<h1>Ecollect!</h1>
+<header>
+  <h1>Ecollect!</h1>
+</header>
+
+<div id="start-message">
+  <p>Escolha o mapa:</p>
+  <button id="nomemapa" data-map="forest">Floresta</button>
+  <button id="nomemapa" data-map="lake">Lago</button>
+</div>
 
 <div id="info">
     <p>Mapa: <span id="map-name">---</span></p>
@@ -22,18 +30,12 @@
 
 <div id="controls">
   <button id="up">▲</button>
-  <div>
-    <button id="left">◀</button>
-    <button id="collect">🎒</button>
-    <button id="right">▶</button>
-  </div>
+  <p>
+  <button id="left">◀</button>
+  <button id="collect">🎒</button>
+  <button id="right">▶</button>
+  </p>
   <button id="down">▼</button>
-</div>
-
-<div id="start-message">
-  <p>Escolha o mapa:</p>
-  <button data-map="forest">Floresta</button>
-  <button data-map="lake">Lago</button>
 </div>
 
 <script src="game.js"></script>
