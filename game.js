@@ -67,7 +67,7 @@ function startGame(map) {
   gameArea.style.display = 'block'; //fazer o gameArea visível
   info.style.display = 'flex'; //fazer score, mapa e tempo visível
 
-  if (window.innerWidth < 600) {
+  if (window.innerWidth < 400) {
     controls.style.display = 'flex'; //só aparecer controles em telas pequenas
     header.style.display = 'none'; //fazer o header invisível em telas pequenas
   }
