@@ -5,6 +5,7 @@ const timeDisplay = document.getElementById('time');
 const mapNameDisplay = document.getElementById('map-name');
 const startMessage = document.getElementById('start-message');
 const info = document.getElementById('info');
+const header = document.getElementById('header');
 
 const controls = document.getElementById('controls');
 const btnUp = document.getElementById('up');
@@ -66,8 +67,13 @@ function startGame(map) {
   gameArea.style.display = 'block'; //fazer o gameArea visível
   info.style.display = 'flex'; //fazer score, mapa e tempo visível
 
-  if (window.innerWidth < 900) { //só aparecer controles em telas pequenas
-    controls.style.display = 'flex';
+  if (window.innerWidth < 600) {
+    controls.style.display = 'flex'; //só aparecer controles em telas pequenas
+    header.style.display = 'none'; //fazer o header invisível em telas pequenas
+  }
+
+  if (window.innerWidth < 900) {
+    controls.style.display = 'flex'; //só aparecer controles em telas pequenas
   }
 
   gameArea.innerHTML = '';
@@ -110,7 +116,6 @@ function gameLoop() {
     ambientLake.pause();
 
     alert('Fim de jogo! Pontuação: ' + score);
-    startMessage.style.display = 'block';
     location.reload();
   }
 }

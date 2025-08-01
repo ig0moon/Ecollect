@@ -17,7 +17,8 @@ header {
 
 #info {
   display: none;
-  margin: 0;
+  margin-top: 5%;
+  margin-bottom: 2%;
   gap: 12vw;
 }
 
@@ -132,8 +133,8 @@ button {
 @media (min-width: 600px) {
   #game-area {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 480px;
+    height: 480px;
     background: url('sprites/forest.png') no-repeat center/cover;
     border: 2px solid black;
     overflow: hidden;
