@@ -4,7 +4,9 @@ const scoreDisplay = document.getElementById('score');
 const timeDisplay = document.getElementById('time');
 const mapNameDisplay = document.getElementById('map-name');
 const startMessage = document.getElementById('start-message');
+const info = document.getElementById('info');
 
+const controls = document.getElementById('controls');
 const btnUp = document.getElementById('up');
 const btnDown = document.getElementById('down');
 const btnLeft = document.getElementById('left');
@@ -61,6 +63,12 @@ function startGame(map) {
   mapNameDisplay.textContent = maps[map].name;
 
   startMessage.style.display = 'none';
+  gameArea.style.display = 'block'; //fazer o gameArea visível
+  info.style.display = 'flex'; //fazer score, mapa e tempo visível
+
+  if (window.innerWidth < 900) { //só aparecer controles em telas pequenas
+    controls.style.display = 'flex';
+  }
 
   gameArea.innerHTML = '';
   gameArea.appendChild(player);
